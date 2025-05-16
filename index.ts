@@ -1,3 +1,5 @@
+console.log('Index.ts carregado')
+
 import { registerRootComponent } from 'expo';
 
 import App from './App';
