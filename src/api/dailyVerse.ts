@@ -1,9 +1,7 @@
 import OpenAI from "openai";
 import type { ChatCompletionMessageParam } from "openai/resources";
 
-const openai = new OpenAI({
-  apiKey: "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", 
-})
+
 
 export const getRandomVerse = async () => {
   try {
