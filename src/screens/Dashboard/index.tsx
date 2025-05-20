@@ -242,7 +242,7 @@ const styleScaled = ScaledSheet.create({
   img_logo:{
     width: moderateScale(width > 375 ? 54 : 45),
     height: moderateScale(width > 375 ? 54 : 45),
-    borderRadius: '100%'
+    borderRadius: 200
   },
   title:{
     width: '85%',
@@ -255,7 +255,7 @@ const styleScaled = ScaledSheet.create({
     justifyContent: 'flex-end',
     width: moderateScale(width > 375 ? 40 : 35),
     height: moderateScale(width > 375 ? 40 : 35),
-    borderRadius: '100%',
+    borderRadius: 200,
     backgroundColor: '#ddd'
   },
   titleMessage:{

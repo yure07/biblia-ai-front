@@ -41,8 +41,11 @@ export const MenuProfile = ({ userName, userPhoto, showMenuProfile, setShowMenuP
 
           {loading && <ActivityIndicator size="small" color={themes.colors.primray} />}
           {userPhoto && (
-            <Image 
-              src={userPhoto} 
+            <Image
+              source={{
+                uri: userPhoto!,
+                cache: 'force-cache'
+              }}
               style={styles.imgProfile}
               alt="profile-photo"
               onLoad={() => setLoading(false)}
@@ -106,7 +109,7 @@ const styles = StyleSheet.create({
   imgProfile:{
     width: 86,
     height: 86,
-    borderRadius: '100%',
+    borderRadius: 200,
     alignSelf: 'center',
     marginTop: 16
   },
