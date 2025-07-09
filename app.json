@@ -1,44 +1,50 @@
 {
   "expo": {
-    "name": "biblia.ai",
-    "slug": "biblia-ai",
+    "name": "test-biblia-ai",
+    "slug": "test-biblia-ai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "plugins": [
-      [
-        "expo-notifications",
-        {
-          "mode": "default"
-        }
-      ],
-      "expo-localization"
-    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yurer.bibliaai",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"]
+      },
+      "entitlements": {
+        "aps-environment": "development",
+        "com.apple.security.application-groups": [
+          "group.${ios.bundleIdentifier}.onesignal"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "edgeToEdgeEnabled": true,
       "package": "com.yurer.bibliaai"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "f305afec-d3a4-484b-b7b1-ed6bdccf5f31"
-      }
-    },
-    "owner": "yurer"
+    "plugins": [
+      "expo-localization",
+      "expo-font",
+      "expo-web-browser",
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development"
+        }
+      ]
+    ]
   }
 }
